@@ -29,7 +29,10 @@ closedCookie.addEventListener("click", clickImg)
 btn.addEventListener("click", toggleScreen)
 
 function clickImg() {
-  randomNumber--
+  if(randomNumber==frases.length)
+  {
+    randomNumber--
+  }
   luckyText.innerText = frases[randomNumber]
   toggleScreen()
   randomNumber = Math.round(Math.random() * frases.length)
